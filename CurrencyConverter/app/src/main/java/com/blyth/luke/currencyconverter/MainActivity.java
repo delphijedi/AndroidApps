@@ -9,10 +9,10 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     public void currencyConvert(View view) {
         EditText currency = findViewById(R.id.currencyEditText);
-        double currencyToConvert = Double.valueOf(currency.getText().toString());
-        double conversionRate = 0.75;
-        double convertedCurrency = currencyToConvert * conversionRate;
-        Toast.makeText(MainActivity.this, "£".concat(Double.toString(convertedCurrency)), Toast.LENGTH_LONG).show();
+        Double currencyToConvert = Double.valueOf(currency.getText().toString());
+        Double conversionRate = 0.75;
+        Double convertedCurrency = currencyToConvert * conversionRate;
+        Toast.makeText(MainActivity.this, "£".concat(convertedCurrency.toString()), Toast.LENGTH_LONG).show();
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
