@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
         Double currencyToConvert = Double.valueOf(currency.getText().toString());
         Double conversionRate = 0.75;
         Double convertedCurrency = currencyToConvert * conversionRate;
-        Toast.makeText(MainActivity.this, "£".concat(convertedCurrency.toString()), Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this, "£".concat(String.format("%.2f", convertedCurrency)), Toast.LENGTH_LONG).show();
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
